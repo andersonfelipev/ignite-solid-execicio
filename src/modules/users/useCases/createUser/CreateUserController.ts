@@ -14,11 +14,7 @@ class CreateUserController {
         email
       });
 
-      return response.status(201).json({
-        admin: false,
-        name,
-        email
-      });
+      return response.status(201).json(user);
 
     }catch (e) {
       return response.status(400).json({error: e.message});
